@@ -1,23 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+//Styles
+import styles from "./styles/app.scss";
+//API
+import axios from "axios";
+// import { requests } from "./api";
+import { API_KEY } from "./api";
+//Components
+import Nav from "./components/Nav";
+import Current from "./components/Current";
+import Details from "./components/Details";
+import Footer from "./components/Footer";
 
 function App() {
+  const [weather, setWeather] = useState(null);
+
+  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(
+        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=Tucson&aqi=no`
+      )
+      .then((data) => {
+        setWeather(data.data);
+        console.log(data.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  //Event
+  const weatherInput = (e) => {
+    setInput(e.target.value);
+  };
+
+  const searchWeather = (e) => {
+    e.preventDefault();
+    axios
+      .get(
+        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${input}`
+      )
+      .then((data) => {
+        setWeather(data.data);
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {weather && (
+        <div>
+          <Nav weatherInput={weatherInput} searchWeather={searchWeather} />
+          <Current weather={weather} />
+          <Details weather={weather} />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }
