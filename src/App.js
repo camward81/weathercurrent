@@ -43,13 +43,18 @@ function App() {
         setWeather(data.data);
       })
       .catch((err) => console.error(err));
+    setInput("");
   };
 
   return (
     <div className="App">
       {weather && (
         <div>
-          <Nav weatherInput={weatherInput} searchWeather={searchWeather} />
+          <Nav
+            input={input}
+            weatherInput={weatherInput}
+            searchWeather={searchWeather}
+          />
           <Current weather={weather} />
           <Details weather={weather} />
           <Footer />

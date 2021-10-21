@@ -1,11 +1,12 @@
 import React from "react";
 
-const Nav = ({ weatherInput, searchWeather }) => {
+const Nav = ({ input, weatherInput, searchWeather }) => {
   return (
     <div className="nav">
       <h1>weathercurrent</h1>
       <form className="search">
         <input
+          value={input}
           type="text"
           placeholder="Search City or ZIP"
           onChange={weatherInput}
