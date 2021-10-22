@@ -1,9 +1,12 @@
 import React from "react";
 
 const Nav = ({ input, weatherInput, searchWeather }) => {
+  const pageRefresh = () => {
+    return document.location.reload();
+  };
   return (
     <div className="nav">
-      <h1>weathercurrent</h1>
+      <h1 onClick={pageRefresh}>weathercurrent</h1>
       <form className="search">
         <input
           value={input}
