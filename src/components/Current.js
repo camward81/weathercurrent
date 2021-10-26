@@ -11,7 +11,7 @@ const Current = ({ weather }) => {
         <h2>{weather.location.region}</h2>
       </div>
       <div className="conditions">
-        <img src={weather.current.condition.icon} />
+        <img src={weather.current.condition.icon} alt="current conditions" />
         <h1>{Math.round(weather.current.temp_f)}</h1>
       </div>
       <div className="low-high">

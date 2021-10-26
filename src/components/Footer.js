@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="weatherapi">
       <p>
         Powered by{" "}
-        <a href="https://www.weatherapi.com/" target="_blank">
+        <a href="https://www.weatherapi.com/" target="_blank" rel="noreferrer">
           WeatherAPI.com
         </a>
       </p>

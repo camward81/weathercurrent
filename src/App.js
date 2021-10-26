@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles/app.scss";
 //API
 import axios from "axios";
-// import { requests } from "./api";
-import { API_KEY } from "./api";
 //Components
 import Nav from "./components/Nav";
 import Current from "./components/Current";
@@ -19,7 +17,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=Tucson&aqi=no`
+        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API}&q=Tucson&aqi=no`
       )
       .then((data) => {
         setWeather(data.data);
@@ -37,7 +35,7 @@ function App() {
     e.preventDefault();
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${input}`
+        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API}&q=${input}`
       )
       .then((data) => {
         setWeather(data.data);
@@ -47,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" styles={styles}>
       {weather && (
         <div>
           <Nav
