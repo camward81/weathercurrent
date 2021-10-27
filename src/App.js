@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=Tucson&aqi=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=Tucson&aqi=no`
       )
       .then((data) => {
         setWeather(data.data);
@@ -35,7 +35,7 @@ function App() {
     e.preventDefault();
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${input}`
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${input}`
       )
       .then((data) => {
         setWeather(data.data);
