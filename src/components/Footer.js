@@ -6,7 +6,7 @@ const Footer = () => {
       <p>
         Powered by{" "}
         <a href="https://www.weatherapi.com/" target="_blank" rel="noreferrer">
-          WeatherAPI.com y
+          WeatherAPI.com
         </a>
       </p>
     </div>
