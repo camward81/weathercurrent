@@ -15,7 +15,7 @@ const Nav = ({ input, weatherInput, searchWeather }) => {
           onChange={weatherInput}
         />
         <button type="submit" onClick={searchWeather}>
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
         </button>
       </form>
     </div>
