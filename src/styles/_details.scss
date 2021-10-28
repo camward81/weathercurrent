@@ -29,4 +29,14 @@
       font-size: 1rem;
     }
   }
+  @media (max-width: 450px) {
+    padding: 0rem 2rem;
+    h3 {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .line {
+      display: none;
+    }
+  }
 }

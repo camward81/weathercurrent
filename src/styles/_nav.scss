@@ -32,4 +32,10 @@
       }
     }
   }
+  @media (max-width: 450px) {
+    flex-direction: column;
+    h1 {
+      padding-bottom: 1rem;
+    }
+  }
 }

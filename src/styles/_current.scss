@@ -46,4 +46,28 @@
       }
     }
   }
+  @media (max-width: 450px) {
+    padding: 2rem 0.5rem;
+    .location {
+      padding-right: 1rem;
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+    .conditions {
+      img {
+        height: 3rem;
+        width: 3rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+    .low-high {
+      p {
+        font-size: 0.7rem;
+        padding: 2px;
+      }
+    }
+  }
 }
