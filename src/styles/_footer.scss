@@ -9,17 +9,3 @@
     color: whitesmoke;
   }
 }
-
-@-moz-document url-prefix() {
-  .weatherapi {
-    min-height: 8vh;
-  }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .weatherapi {
-    position: relative;
-    bottom: 0;
-    min-height: 8vh;
-  }
-}
