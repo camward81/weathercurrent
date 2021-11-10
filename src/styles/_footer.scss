@@ -9,3 +9,9 @@
     color: whitesmoke;
   }
 }
+
+@-moz-document url-prefix() {
+  .weatherapi {
+    min-height: 8vh;
+  }
+}
