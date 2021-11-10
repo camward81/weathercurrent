@@ -15,3 +15,9 @@
     min-height: 8vh;
   }
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .weatherapi {
+    min-height: 8vh;
+  }
+}
