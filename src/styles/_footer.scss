@@ -1,11 +1,10 @@
 .weatherapi {
-  height: 10vh;
+  min-height: 4vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
   margin-top: 3.5rem;
-  // background: rgb(44, 44, 194);
   a {
     color: rgb(228, 186, 0);
     text-decoration: none;
