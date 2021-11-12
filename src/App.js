@@ -26,7 +26,7 @@ function App() {
       .catch((err) => console.error(err));
   }, []);
 
-  //Event
+  //Events
   const weatherInput = (e) => {
     setInput(e.target.value);
   };
